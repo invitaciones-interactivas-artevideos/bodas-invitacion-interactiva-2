@@ -124,9 +124,14 @@ h3::after {
     padding: 1rem 2.2rem;
     margin-top: var(--espacio-texto-boton);
 
-    background: var(--accent);
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        var(--accent) 50%,
+        #ffffff 100%
+    );
 
-    color: #000 !important;   /* 👈 negro fijo */
+    color: #000 !important;
     font-family: var(--body-font) !important;
 
     font-size: 0.75rem !important;
@@ -137,16 +142,26 @@ h3::after {
     text-decoration: none;
     cursor: pointer;
 
-    border: none;
+    border: 1px solid rgba(0,0,0,0.08);
     border-radius: 50px;
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.7);
 
-    transition: all 0.25s ease;
+    transition: all 0.3s ease;
 }
-button.btn {
-    font-family: var(--body-font) !important;
-    color: #000 !important;
+
+.btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05);
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.18),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.btn:active {
+    transform: translateY(-1px);
 }
 /* ── OTROS ELEMENTOS ── */
 .scroll-arrow {
