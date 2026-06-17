@@ -228,7 +228,7 @@ a.btn {
 <div id="gift-modal" class="modal" onclick="closeGiftModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
         <span class="close-btn" onclick="closeGiftModal()">&times;</span>
-        <h2 style="color:white; font-size: 1.5rem; letter-spacing: 2px;">Regalo</h2>
+       <h2 style="color:white; font-size: 1.5rem; letter-spacing: 2px;">Datos del Colectivo</h2>
         <p id="m-texto" style="font-size: 0.85rem; margin-bottom: 10px; opacity: 0.9;"></p>
         <div style="background: rgba(0,0,0,0.25); border-radius: 20px; padding: 1rem; margin: 1.5rem 0; text-align: left;">
             <div style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><span style="font-size: 0.6rem; text-transform: uppercase; opacity: 0.7;">Titular</span><span style="font-size: 1rem; display: block; font-weight: 300;" id="m-titular"></span></div>
@@ -507,12 +507,7 @@ CONFIG.fotos.forEach(f => g += `<div class="gallery-item" onclick="openLightbox(
 createSec('galeria', 'camera', 'Momentos', g + `</div>`);
 createSec('rsvp', 'rings', 'Confirmación', `<p>Por favor, confirma tu asistencia antes del 10 de diciembre.</p><a href="https://wa.me/59899000000" target="_blank" class="btn">Confirmar WhatsApp</a>`);
 createSec(
-  'regalos',
-  'gift',
-  'Datos de Colectivo',
-  `<p>${CONFIG.regalos.textoSeccion}</p>
-   <button class="btn" onclick="openGiftModal()">Ver Datos</button>`
-);
+  createSec('regalos', 'gift', 'Regalos', `<p>${CONFIG.regalos.textoSeccion}</p><button class="btn" onclick="openGiftModal()">Ver Datos</button>`);
 createSec('cierre', 'heart', CONFIG.cierre.t, `<p>${CONFIG.cierre.s}</p><div style="width:120px; margin:2rem auto; color:var(--accent); opacity:0.5;"><svg viewBox="0 0 100 20" stroke="currentColor"><path d="M0 10 Q25 0 50 10 T100 10" fill="none"/></svg></div>`);
 
 // --- LÓGICA DE FUNCIONAMIENTO ---
