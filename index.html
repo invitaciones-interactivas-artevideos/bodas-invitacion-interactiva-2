@@ -506,7 +506,6 @@ if (CONFIG.eventos.fiesta.mostrar) {
 CONFIG.fotos.forEach(f => g += `<div class="gallery-item" onclick="openLightbox('${f}')"><img src="${f}"></div>`);
 createSec('galeria', 'camera', 'Momentos', g + `</div>`);
 createSec('rsvp', 'rings', 'Confirmación', `<p>Por favor, confirma tu asistencia antes del 10 de diciembre.</p><a href="https://wa.me/59899000000" target="_blank" class="btn">Confirmar WhatsApp</a>`);
-createSec(
 createSec('regalos', 'gift', 'Regalos', `<p>${CONFIG.regalos.textoSeccion}</p><button class="btn" onclick="openGiftModal()">Ver Datos</button>`);  
 createSec('cierre', 'heart', CONFIG.cierre.t, `<p>${CONFIG.cierre.s}</p><div style="width:120px; margin:2rem auto; color:var(--accent); opacity:0.5;"><svg viewBox="0 0 100 20" stroke="currentColor"><path d="M0 10 Q25 0 50 10 T100 10" fill="none"/></svg></div>`);
 
